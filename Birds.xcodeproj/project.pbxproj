@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		2CFE9E7B2145DE49000EF7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9E7A2145DE49000EF7D4 /* AppDelegate.swift */; };
 		2CFE9E7D2145DE49000EF7D4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E7C2145DE49000EF7D4 /* GameScene.sks */; };
-		2CFE9E7F2145DE49000EF7D4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E7E2145DE49000EF7D4 /* Actions.sks */; };
 		2CFE9E812145DE49000EF7D4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9E802145DE49000EF7D4 /* GameScene.swift */; };
 		2CFE9E832145DE49000EF7D4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9E822145DE49000EF7D4 /* GameViewController.swift */; };
 		2CFE9E862145DE49000EF7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E842145DE49000EF7D4 /* Main.storyboard */; };
 		2CFE9E882145DE49000EF7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E872145DE49000EF7D4 /* Assets.xcassets */; };
 		2CFE9E8B2145DE49000EF7D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E892145DE49000EF7D4 /* LaunchScreen.storyboard */; };
+		2CFE9E932145E037000EF7D4 /* BirdTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E922145E037000EF7D4 /* BirdTileSet.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CFE9E772145DE49000EF7D4 /* Birds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFE9E7A2145DE49000EF7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CFE9E7C2145DE49000EF7D4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		2CFE9E7E2145DE49000EF7D4 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		2CFE9E802145DE49000EF7D4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		2CFE9E822145DE49000EF7D4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2CFE9E852145DE49000EF7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CFE9E872145DE49000EF7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CFE9E8A2145DE49000EF7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CFE9E8C2145DE49000EF7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CFE9E922145E037000EF7D4 /* BirdTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BirdTileSet.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +62,13 @@
 			children = (
 				2CFE9E7A2145DE49000EF7D4 /* AppDelegate.swift */,
 				2CFE9E7C2145DE49000EF7D4 /* GameScene.sks */,
-				2CFE9E7E2145DE49000EF7D4 /* Actions.sks */,
 				2CFE9E802145DE49000EF7D4 /* GameScene.swift */,
 				2CFE9E822145DE49000EF7D4 /* GameViewController.swift */,
 				2CFE9E842145DE49000EF7D4 /* Main.storyboard */,
 				2CFE9E872145DE49000EF7D4 /* Assets.xcassets */,
 				2CFE9E892145DE49000EF7D4 /* LaunchScreen.storyboard */,
 				2CFE9E8C2145DE49000EF7D4 /* Info.plist */,
+				2CFE9E922145E037000EF7D4 /* BirdTileSet.sks */,
 			);
 			path = Birds;
 			sourceTree = "<group>";
@@ -131,11 +131,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFE9E932145E037000EF7D4 /* BirdTileSet.sks in Resources */,
 				2CFE9E862145DE49000EF7D4 /* Main.storyboard in Resources */,
 				2CFE9E7D2145DE49000EF7D4 /* GameScene.sks in Resources */,
 				2CFE9E882145DE49000EF7D4 /* Assets.xcassets in Resources */,
 				2CFE9E8B2145DE49000EF7D4 /* LaunchScreen.storyboard in Resources */,
-				2CFE9E7F2145DE49000EF7D4 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
