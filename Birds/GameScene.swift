@@ -116,11 +116,11 @@ class GameScene: SKScene {
                 let block = Block(type: type)
                 block.size = child.size
                 block.position = child.position
-                block.color = UIColor.brown
                 block.zPosition = ZPosition.obstacles
+                block.zRotation = child.zRotation
                 block.createPhysicsBody()
                 mapNode.addChild(block)
-                child.color = UIColor.clear
+                child.removeFromParent()
             }
         }
         
@@ -156,6 +156,7 @@ class GameScene: SKScene {
         bird.physicsBody?.isDynamic = false
         bird.position = anchor.position
         addChild(bird)
+        bird.aspectScale(to: mapNode.tileSize, width: false, multiplier: 1.0)
         constraintToAnchor(active: true)
         roundState = .ready
         

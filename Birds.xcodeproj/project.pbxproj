@@ -11,6 +11,7 @@
 		2C00A10A2145FAD30000BA91 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A1092145FAD30000BA91 /* Configuration.swift */; };
 		2C00A10C2145FD440000BA91 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A10B2145FD440000BA91 /* Bird.swift */; };
 		2C00A10E21460E6F0000BA91 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00A10D21460E6F0000BA91 /* Block.swift */; };
+		2C99035F21461C3E002A9B75 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99035E21461C3E002A9B75 /* SKNode+Extensions.swift */; };
 		2CFE9E7B2145DE49000EF7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9E7A2145DE49000EF7D4 /* AppDelegate.swift */; };
 		2CFE9E7D2145DE49000EF7D4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9E7C2145DE49000EF7D4 /* GameScene.sks */; };
 		2CFE9E812145DE49000EF7D4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9E802145DE49000EF7D4 /* GameScene.swift */; };
@@ -26,6 +27,7 @@
 		2C00A1092145FAD30000BA91 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		2C00A10B2145FD440000BA91 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		2C00A10D21460E6F0000BA91 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		2C99035E21461C3E002A9B75 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
 		2CFE9E772145DE49000EF7D4 /* Birds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFE9E7A2145DE49000EF7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CFE9E7C2145DE49000EF7D4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = CustomNodes;
 			sourceTree = "<group>";
 		};
+		2C99035D21461C21002A9B75 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C99035E21461C3E002A9B75 /* SKNode+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		2CFE9E6E2145DE48000EF7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		2CFE9E792145DE49000EF7D4 /* Birds */ = {
 			isa = PBXGroup;
 			children = (
+				2C99035D21461C21002A9B75 /* Extensions */,
 				2C00A1062145EAF80000BA91 /* CustomNodes */,
 				2C00A1052145E8160000BA91 /* TileSets */,
 				2C00A0FE2145E7AD0000BA91 /* Scenes */,
@@ -207,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CFE9E812145DE49000EF7D4 /* GameScene.swift in Sources */,
+				2C99035F21461C3E002A9B75 /* SKNode+Extensions.swift in Sources */,
 				2C00A10E21460E6F0000BA91 /* Block.swift in Sources */,
 				2C00A10A2145FAD30000BA91 /* Configuration.swift in Sources */,
 				2CFE9E832145DE49000EF7D4 /* GameViewController.swift in Sources */,
