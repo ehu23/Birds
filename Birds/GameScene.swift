@@ -34,6 +34,8 @@ class GameScene: SKScene {
     var roundState = RoundState.ready
     
     override func didMove(to view: SKView) {
+        
+        physicsWorld.contactDelegate = self
         setupLevel()
         setupGestureRecognizers()
     }
@@ -180,6 +182,35 @@ class GameScene: SKScene {
     
 }
 
+extension GameScene: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let mask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        switch mask {
+        case PhysicsCategories.bird | PhysicsCategories.block, PhysicsCategories.block | PhysicsCategories.edge:
+            if let block = contact.bodyB.node as?  Block {
+                block.impact(with: Int(contact.collisionImpulse))
+            } else if let block = contact.bodyA.node as? Block {
+                block.impact(with: Int(contact.collisionImpulse))
+            }
+            
+        case PhysicsCategories.block | PhysicsCategories.block:
+            if let block = contact.bodyA.node as? Block {
+                block.impact(with: Int(contact.collisionImpulse))
+            }
+            if let block = contact.bodyB.node as? Block {
+                block.impact(with: Int(contact.collisionImpulse))
+            }
+    
+        case PhysicsCategories.bird | PhysicsCategories.edge:
+            bird.flying = false
+            
+        default:
+            break
+        }
+    }
+}
 
 extension GameScene {
     
