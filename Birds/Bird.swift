@@ -17,7 +17,13 @@ class Bird: SKSpriteNode {
     
     let birdType: BirdType
     var grabbed = false
-    
+    var flying = false {
+        didSet { //didSet is an observer for this property
+            if flying {
+                physicsBody?.isDynamic = true
+            }
+        }
+    }
     
     init(type: BirdType) {
         birdType = type
