@@ -18,11 +18,40 @@ class GameScene: SKScene {
     var pinchRecognizer = UIPinchGestureRecognizer()
     var maxScale: CGFloat = 0
     
+    var bird = Bird(type: .red)
+    let anchor = SKNode()
+    
     override func didMove(to view: SKView) {
         setupLevel()
         setupGestureRecognizers()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first { //get first touch
+            let location = touch.location(in: self)
+            if bird.contains(location) {
+                panRecognizer.isEnabled = false //dont move camera anymore
+                bird.grabbed = true
+                bird.position = location
+            }
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) { //if a touch is moving on a screen
+        if let touch = touches.first {
+            if bird.grabbed {
+                let location = touch.location(in: self)
+                bird.position = location
+            }
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if bird.grabbed {
+            bird.grabbed = false
+            
+        }
+    }
     func setupGestureRecognizers() {
         guard let view = view else {return}
         panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(pan))
@@ -38,6 +67,9 @@ class GameScene: SKScene {
         }
         
         addCamera()
+        anchor.position = CGPoint(x: mapNode.frame.midX/2, y: mapNode.frame.midY/2)
+        addChild(anchor)
+        addBird()
     }
     
     func addCamera() {
@@ -46,6 +78,11 @@ class GameScene: SKScene {
         gameCamera.position = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
         camera = gameCamera
         gameCamera.setConstraints(with: self, and: mapNode.frame, to: nil)
+    }
+    
+    func addBird() {
+        bird.position = anchor.position
+        addChild(bird)
     }
     
 }
