@@ -29,6 +29,7 @@ struct PhysicsCategories {
     static let edge: UInt32 = 0x1
     static let bird: UInt32 = 0x1 << 1
     static let block: UInt32 = 0x1 << 2
+    static let enemy: UInt32 = 0x1 << 3
 }
 
 
