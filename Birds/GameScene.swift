@@ -138,6 +138,7 @@ class GameScene: SKScene {
         physicsBody?.collisionBitMask = PhysicsCategories.all
         anchor.position = CGPoint(x: mapNode.frame.midX/2, y: mapNode.frame.midY/2)
         addChild(anchor)
+        addSlingshot()
         addBird()
     }
     
@@ -147,6 +148,15 @@ class GameScene: SKScene {
         gameCamera.position = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
         camera = gameCamera
         gameCamera.setConstraints(with: self, and: mapNode.frame, to: nil)
+    }
+    
+    func addSlingshot() {
+        let slingshot = SKSpriteNode(imageNamed: "slingshot")
+        let scaleSize = CGSize(width: 0, height: mapNode.frame.midY/2 - mapNode.tileSize.height/2)
+        slingshot.aspectScale(to: scaleSize, width: false, multiplier: 1.0)
+        slingshot.position = CGPoint(x: anchor.position.x, y: mapNode.tileSize.height + slingshot.size.height/2)
+        slingshot.zPosition = ZPosition.obstacles
+        mapNode.addChild(slingshot)
     }
     
     func addBird() {
@@ -162,8 +172,9 @@ class GameScene: SKScene {
         bird.physicsBody?.collisionBitMask = PhysicsCategories.block | PhysicsCategories.edge
         bird.physicsBody?.isDynamic = false
         bird.position = anchor.position
+        bird.zPosition = ZPosition.bird
         addChild(bird)
-        bird.aspectScale(to: mapNode.tileSize, width: false, multiplier: 1.0)
+        bird.aspectScale(to: mapNode.tileSize, width: true, multiplier: 1.0)
         constraintToAnchor(active: true)
         roundState = .ready
         

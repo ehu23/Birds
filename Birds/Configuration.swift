@@ -18,6 +18,7 @@ struct ZPosition {
     
     static let background: CGFloat = 0
     static let obstacles: CGFloat = 1
+    static let bird: CGFloat = 2
     static let hudBackground: CGFloat = 10
     static let hudLabel: CGFloat = 11
     
