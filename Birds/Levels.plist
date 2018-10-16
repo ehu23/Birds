@@ -6,6 +6,8 @@
 	<dict>
 		<key>Birds</key>
 		<array>
+			<string>blue</string>
+			<string>yellow</string>
 			<string>red</string>
 			<string>blue</string>
 			<string>gray</string>
@@ -30,6 +32,7 @@
 	<dict>
 		<key>Birds</key>
 		<array>
+			<string>red</string>
 			<string>yellow</string>
 			<string>yellow</string>
 			<string>yellow</string>
