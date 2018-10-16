@@ -2,11 +2,83 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Level_2</key>
+	<key>Level_9</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>red</string>
+			<string>blue</string>
+			<string>gray</string>
+			<string>gray</string>
+			<string>yellow</string>
+			<string>red</string>
+			<string>blue</string>
+		</array>
+	</dict>
+	<key>Level_8</key>
 	<dict>
 		<key>Birds</key>
 		<array>
 			<string>blue</string>
+			<string>yellow</string>
+			<string>red</string>
+			<string>red</string>
+			<string>gray</string>
+		</array>
+	</dict>
+	<key>Level_7</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>yellow</string>
+			<string>yellow</string>
+			<string>yellow</string>
+		</array>
+	</dict>
+	<key>Level_6</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>yellow</string>
+			<string>gray</string>
+			<string>yellow</string>
+			<string>gray</string>
+		</array>
+	</dict>
+	<key>Level_5</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>red</string>
+			<string>red</string>
+			<string>red</string>
+		</array>
+	</dict>
+	<key>Level_4</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>gray</string>
+			<string>blue</string>
+			<string>gray</string>
+		</array>
+	</dict>
+	<key>Level_3</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>red</string>
+			<string>gray</string>
+		</array>
+	</dict>
+	<key>Level_2</key>
+	<dict>
+		<key>Birds</key>
+		<array>
+			<string>red</string>
+			<string>red</string>
+			<string>blue</string>
+			<string>yellow</string>
 			<string>blue</string>
 		</array>
 	</dict>
